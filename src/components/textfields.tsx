@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { toGruefnisch, fromGruefnisch } from "secret-languages";
+import { toGruefnisch, fromGruefnisch, toRaeubersprache, fromRaeubersprache } from "secret-languages";
 import LanguageSelector from "./LanguageSelector";
 
 const Translator: React.FC = () => {
@@ -12,6 +12,8 @@ const Translator: React.FC = () => {
     let res = "";
     if (sourceLang === "Deutsch" && targetLang === "Grüfnisch") res = toGruefnisch(sourceText);
     else if (sourceLang === "Grüfnisch" && targetLang === "Deutsch") res = fromGruefnisch(sourceText);
+    else if (sourceLang === "Deutsch" && targetLang === "Räubersprache") res = toRaeubersprache(sourceText);
+    else if (sourceLang === "Räubersprache" && targetLang === "Deutsch") res = fromRaeubersprache(sourceText);
     setTranslatedText(res);
   };
 
@@ -29,10 +31,9 @@ const Translator: React.FC = () => {
   return (
     <div className="p-4 max-w-md mx-auto space-y-4 text-center">
       <LanguageSelector
-        languages={["Deutsch", "Grüfnisch"]}
+        languages={["Grüfnisch", "Räubersprache"]}
         sourceLang={sourceLang}
         targetLang={targetLang}
-        onSourceChange={setSourceLang}
         onTargetChange={setTargetLang}
         onSwap={swapLanguages}
       />
