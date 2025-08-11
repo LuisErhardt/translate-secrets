@@ -4,7 +4,7 @@ This projects is used for a Google translator alike website for translating text
 
 The app was built with Vite + React Typescript + Tailwind.
 
-Click [here](https://luiserhardt.github.io/db-delay-viewer/) for a working demo.
+Click [here](https://luiserhardt.github.io/translate-secrets/) for a working demo.
 
 ## Installation
 
