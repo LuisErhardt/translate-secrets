@@ -13,7 +13,7 @@ Click [here](https://luiserhardt.github.io/db-delay-viewer/) for a working demo.
 git clone https://github.com/LuisErhardt/translate-secrets.git
 
 # Navigate to project folder
-cd translate-secrets.git
+cd translate-secrets
 
 # Install dependencies
 npm install
